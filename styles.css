@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px; /* 1rem = 16px */
+    font: inherit;
+    font-family: 'Verdana', sans-serif;
+}   
+
+body {
+    background: #3AAFA9;
+}
+
+.submit-button {
+    width: 60px;
+    height: 30px;
+    margin: 0 1rem;
+}
+
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 2rem;
+}
+
+/* Container for Step 1, 2, 3 */
+.generator-container {
+    margin: 2rem;
+}
+
+/* Handshake Image */
+.handshake-img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Container that has starter info, labels & inputs */
+.starter-container, .starter-container p {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+/* Step 1, 2, 3 Boxes */
+.steps-container {
+    border: 2px solid #17252A;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+    text-align: center;
+    background-color: #2B7A78;
+}
+
+/* Step 1, 2, 3 Titles */
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Container for Client->packet->Server animation */
+.client-packet-server-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 50px;
+}
+
+/* Color Schemes Used
+
+    #17252A
+    #2B7A78
+    #3AAFA9
+    #DEF2F1
+    #FEFFFF
+
+*/
+
+
+/* Animations */
+
+
+.animation-box {
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem;
+    background: #FEFFFF;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.step-1-animation {
+    animation: move-forwards 3500ms infinite forwards ease-in-out;
+}
+
+.step-2-animation {
+    animation: move-backwards 3500ms infinite forwards ease-in-out;
+}
+
+.step-3-animation {
+    animation: move-forwards 3500ms infinite forwards ease-in-out;
+}
+
+
+/* Animation used for Step 1 AND Step 3 */
+@keyframes move-forwards {
+    from {
+        transform: translateX(-50px);
+        opacity: 1;
+    }   
+    to {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+}
+
+/* Animation used for Step 2 ONLY */
+@keyframes move-backwards {
+    from {
+        transform: translateX(50px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .steps-container {
+        width: 90%;
+        margin: 0 auto 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .starter-container, .information-to-user {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+    }
+
+    .animation-box {
+        width: 30px;
+        height: 30px;
+    }
+
+    span {
+        font-size: 10px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input {
+        display: block;
+        margin: 5px auto;
+    }
+
+}

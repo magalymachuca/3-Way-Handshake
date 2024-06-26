@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TCP 3-Way Handshake Generator</title>
+</head>
+<body>
+    <h1 class="title">TCP 3-Way Handshake Generator</h1>
+    <a href="https://www.youtube.com/watch?v=xMtP5ZB3wSk" target="_blank"><img src="images/handshake.png" class="handshake-img" alt="Picture of a Handshake"></a>
+    <div class="starter-container">
+        <p class="information-to-user">I will generate Sequence numbers and Acknowledgement numbers based on the ISN values you type in!</p>
+        <form id="numbers-form">
+            <label for="client-isn">Client ISN#:</label>
+            <input type="number" id="client-isn" name="client-isn" placeholder="Enter a number...">
+            <label for="server-isn">Server ISN#:</label>
+            <input type="number" id="server-isn" name="server-isn" placeholder="Enter a number...">
+            <button type="submit" class="submit-button" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div class="generator-container">
+        <div class="step-1-container steps-container" id="step-1-container">
+            <h2>Step 1</h2>
+            <div class="client-packet-server-container">
+                <span class="client">Client</span>
+                <div class="step-1-animation animation-box">
+                    <span>SYN</span>
+                </div>
+                <span class="server">Server</span>
+            </div>
+            <p class="statement-1 statement" id="statement-1 statement">Client sends a SYN packet to the server.</p>
+            <p class="syn-calculation" id="syn-calculation"></p>
+        </div>
+
+        <div class="step-2-container steps-container" id="step-2-container">
+            <h2>Step 2</h2>
+            <div class="client-packet-server-container">
+                <span class="client">Client</span>
+                <div class="step-2-animation animation-box">
+                    <span>SYN-ACK</span>
+                </div>
+                <span class="server">Server</span>
+            </div>
+            <p class="statement-2 statement" id="statement-2 statement">The server sends a SYN-ACK packet to the client.</p>
+            <p class="syn-ack-calculation" id="syn-ack-calculation"></p>
+        </div>
+
+        <div class="step-3-container steps-container" id="step-3-container">
+            <h2>Step 3</h2>
+            <div class="client-packet-server-container">
+                <span class="client">Client</span>
+                <div class="step-3-animation animation-box">
+                    <span>ACK</span>
+                </div>
+                <span class="server">Server</span>
+            </div>
+            <p class="statement-3 statement" id="statement-3 statement">The client sends an ACK packet to the server.</p>
+            <p class="ack-calculation" id="ack-calculation"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
